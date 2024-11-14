@@ -1,0 +1,12 @@
+services:
+
+  app:
+    container_name: py-flask-gunicorn-sample
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP_PORT: 7711
+    image: py-flask-gunicorn-sample
+    network_mode: host
+
